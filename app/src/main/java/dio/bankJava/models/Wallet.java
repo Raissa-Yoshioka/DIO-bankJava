@@ -13,12 +13,12 @@ public abstract class Wallet {
     @Getter
     private final AccountType accountType;
 
-    protected final List<Money> money;
+    protected final List<Money> moneyList;
 
     // Iniciando uma carteira
     public Wallet(AccountType accountType) {
         this.accountType = accountType;
-        this.money = new ArrayList<>();
+        this.moneyList = new ArrayList<>();
     }
 
     protected List<Money> generateMoney(final long amount, final String description) {
@@ -27,24 +27,24 @@ public abstract class Wallet {
     }
 
     public long getFunds() {
-        return money.size();
+        return moneyList.size();
     }
 
     public void addMoney(final List<Money> money, final AccountType accountType, final String description) {
         var history = new MoneyAudit(UUID.randomUUID(), accountType, description, OffsetDateTime.now());
         money.forEach(m -> m.addHistory(history));
-        this.money.addAll(money);
+        this.moneyList.addAll(money);
     }
 
     public List<Money> reduceMoney(final long amount) {
         List<Money> toRemove = new ArrayList<>();
         for (int i = 0; i < amount; i++) {
-            toRemove.add(this.money.removeFirst());
+            toRemove.add(this.moneyList.removeFirst());
         }
         return toRemove;
     }
 
     public List<MoneyAudit> getFinancialTransactions() {
-        return money.stream().flatMap(m -> m.getHistory().stream()).toList();
+        return moneyList.stream().flatMap(m -> m.getHistoric().stream()).toList();
     }
 }
