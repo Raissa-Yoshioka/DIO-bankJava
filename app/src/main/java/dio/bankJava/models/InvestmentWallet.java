@@ -22,7 +22,7 @@ public class InvestmentWallet extends Wallet {
     }
 
     public void updateAmount(final long percent) {
-        var amount = getFunds() * percent / 100;
+        var amount = getBalance() * percent / 100;
         var history = new MoneyAudit(UUID.randomUUID(), getAccountType(), "Rendimentos", OffsetDateTime.now());
         var money = Stream.generate(() -> new Money(history)).limit(amount).toList();
         this.moneyList.addAll(money);
