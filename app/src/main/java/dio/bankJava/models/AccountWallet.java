@@ -29,7 +29,7 @@ public class AccountWallet extends Wallet {
         addMoney(amount, "Valor da criação da conta");
     }
 
-    public List<InvestmentWallet> getInvestmentWallets() {
+    public List<InvestmentWallet> getInvestmentsWallets() {
         return this.investmentsWallets;
     }
 }
