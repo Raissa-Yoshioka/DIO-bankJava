@@ -25,7 +25,7 @@ Este projeto é uma aplicação Java orientada a objetos, desenvolvida com o obj
     * `dio.bankJava`:
         - `Main.java`: ponto de entrada da aplicação, lidando com o menu da aplicação e processamento das entradas do usuário.
     * `dio.bankJava.exceptions`:  
-        - Classes que lidam com exceções específicas para diferentes cenários, como por exemplo o caso de uma conta não ser encontrada pela aplicação (`AccountNotFoundException`).
+        - Classes que lidam com exceções específicas para diferentes cenários, como por exemplo `AccountNotFoundException`, que lida com o caso de uma conta não ser encontrada pela aplicação.
     * `dio.bankJava.models`:
         - Classes que contém os modelos de domínio principais da aplicação, como por exemplo `AccountType`, para a definição dos tipos de conta oferecidos pela aplicação.
     * `dio.bankJava.repository`:
@@ -49,7 +49,7 @@ Este projeto é uma aplicação Java orientada a objetos, desenvolvida com o obj
 
   2. Abra o projeto na sua IDE (VS Code, Eclipse ou outras).
   3. Localize o arquivo `Main.java` e o execute.
-  4. Ao executar o seguinte menu aparece no terminal:
+  4. Ao executar, o seguinte menu aparece no terminal:
      ```sh
              Bem-vindo ao DIO BankJava
       ------------------------------------------
@@ -69,4 +69,4 @@ Este projeto é uma aplicação Java orientada a objetos, desenvolvida com o obj
       13 - Mostrar Extrato de Histórico
       14 - Sair
       ```
-  5. E pronto! Você pode testar as operações e funcionamento da aplicação
+  5. E pronto! Você pode testar as operações e funcionamento da aplicação.
