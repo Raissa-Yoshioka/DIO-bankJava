@@ -42,7 +42,7 @@ Este projeto é uma aplicação Java orientada a objetos, desenvolvida com o obj
 
 ## Passos Iniciais
 
-  1. **Clone o repositório:**
+  1. Clone o repositório:
      ```sh
      git clone https://github.com/Raissa-Yoshioka/DIO-bankJava.git
      ```
