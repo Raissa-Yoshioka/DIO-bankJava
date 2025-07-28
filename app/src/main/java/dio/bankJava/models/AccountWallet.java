@@ -13,11 +13,6 @@ public class AccountWallet extends Wallet {
     private final List<String> pix;
     private final List<InvestmentWallet> investmentsWallets = new ArrayList<>();
 
-    public AccountWallet(final List<String> pix) {
-        super(ACCOUNT);
-        this.pix = pix;
-    }
-
     public void addMoney(final long amount, final String description) {
         var money = generateMoney(amount, description);
         this.moneyList.addAll(money);
@@ -31,5 +26,12 @@ public class AccountWallet extends Wallet {
 
     public List<InvestmentWallet> getInvestmentsWallets() {
         return this.investmentsWallets;
+    }
+
+    @Override
+    public String toString() {
+        return "AccountWallet{" + "Service = " + getAccountType() +
+                "; Funds = R$" + getBalance() / 100 + "," + getBalance() % 100 +
+                "; Pix = " + pix + '}';
     }
 }

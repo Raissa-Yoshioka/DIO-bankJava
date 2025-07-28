@@ -53,13 +53,14 @@ public class InvestmentRepository {
         checkBalanceForTransactions(account, investment.initialFunds());
         var wallet = new InvestmentWallet(investment, account, investment.initialFunds());
         wallets.add(wallet);
+        account.getInvestmentsWallets().add(wallet);
         return wallet;
     }
 
     public InvestmentWallet deposit(final String pix, final long funds) {
         var wallet = findWalletByAccountPix(pix);
         checkBalanceForTransactions(wallet, funds);
-        wallet.getAccount().addMoney(wallet.reduceMoney(funds), wallet.getAccountType(), "Depósito de Investimentos");
+        wallet.getAccount().addMoney(wallet.reduceMoney(funds), wallet.getAccountType(), "Depósito de Investimentos no valor de " + funds);
         return wallet;
     }
 

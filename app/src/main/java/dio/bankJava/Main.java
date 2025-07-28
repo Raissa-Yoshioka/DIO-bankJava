@@ -65,7 +65,7 @@ public class Main {
         System.out.println("Informe as chaves pix, separadas por ';'");
         var pix = Arrays.stream(scanner.next().split(";")).toList();
 
-        System.out.println("Informe o valor inicial do depósito");
+        System.out.println("Informe o valor inicial do depósito (apenas números):");
         var amount = scanner.nextLong();
 
         var wallet = accountRepository.create(pix, amount);

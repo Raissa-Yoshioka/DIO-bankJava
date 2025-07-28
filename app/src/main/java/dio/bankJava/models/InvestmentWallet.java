@@ -27,4 +27,11 @@ public class InvestmentWallet extends Wallet {
         var money = Stream.generate(() -> new Money(history)).limit(amount).toList();
         this.moneyList.addAll(money);
     }
+
+    @Override
+    public String toString() {
+        return "InvestmentWallet{" + investment + ", Account =" + account +
+                ", Service =" + getAccountType() + ", Funds = R$" + getBalance()/100 +
+                "," + getBalance() % 100 + "}";
+    } 
 }

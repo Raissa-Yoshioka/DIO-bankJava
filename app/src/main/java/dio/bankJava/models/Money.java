@@ -13,13 +13,13 @@ import lombok.ToString;
 public class Money {
 
     // Criando uma lista para o histórico das transações
-    private final List<MoneyAudit> historic = new ArrayList<>();
+    private final List<MoneyAudit> history = new ArrayList<>();
 
     public Money(final MoneyAudit history) {
-        this.historic.add(history);
+        this.history.add(history);
     }
 
     public void addHistory(final MoneyAudit history) {
-        this.historic.add(history);
+        this.history.add(history);
     }
 }

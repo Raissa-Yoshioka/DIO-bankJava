@@ -45,6 +45,12 @@ public abstract class Wallet {
     }
 
     public List<MoneyAudit> getFinancialTransactions() {
-        return moneyList.stream().flatMap(m -> m.getHistoric().stream()).toList();
+        return moneyList.stream().flatMap(m -> m.getHistory().stream()).toList();
+    }
+
+    @Override
+    public String toString() {
+        return "Wallet{" + "service =" + accountType +
+                ", money = R$" + moneyList.size() / 100 + "," + moneyList.size() % 100 + "}";
     }
 }

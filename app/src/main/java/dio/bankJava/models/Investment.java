@@ -5,5 +5,9 @@ public record Investment(
     long tax,
     long initialFunds
 ) {
-
+    @Override
+    public String toString() {
+        return "Investment{" + "id = " + id + ", Tax = " + tax + "%" +
+                ", InitialFunds = " + (initialFunds / 100) + "," + (initialFunds % 100) + "}";
+    }
 }

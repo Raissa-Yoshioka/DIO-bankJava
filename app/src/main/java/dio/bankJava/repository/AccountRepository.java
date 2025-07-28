@@ -43,12 +43,14 @@ public class AccountRepository {
     public void deposit(final String pix, final long fundsAmount) {
         var target = findByPix(pix);
         target.addMoney(fundsAmount, "Depósito");
+        System.out.println("Depósito realizado com sucesso.");
     }
 
     public long withdraw(final String pix, final long amount) {
         var source = findByPix(pix);
         checkBalanceForTransactions(source, amount);
         source.reduceMoney(amount);
+        System.out.println("Saque realizado com sucesso");
         return amount;
     }
 
