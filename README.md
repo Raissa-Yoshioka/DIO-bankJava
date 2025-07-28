@@ -40,7 +40,7 @@ Este projeto é uma aplicação Java orientada a objetos, desenvolvida com o obj
   - JDK 21 ou superior;
   - Gradle
 
-## Passos Iniciais
+### Passos Iniciais
 
   1. Clone o repositório:
      ```sh
