@@ -49,7 +49,7 @@ public class Main {
                 case 8 -> withdrawInvestment();
                 case 9 -> {
                     investmentRepository.updateAmount();
-                    System.out.println("Investimentos reajustados");
+                    System.out.println("Investimentos atualizados.");
                 }
                 case 10 -> accountRepository.list().forEach(System.out::println);
                 case 11 -> investmentRepository.list().forEach(System.out::println); 
@@ -169,7 +169,7 @@ public class Main {
         var pix = scanner.next();
         try {
             var sortedHistory = accountRepository.getHistory(pix);
-            System.out.println("Extrato de: '" + pix + "'':");
+            System.out.println("Extrato da conta: '" + pix + "'':");
             sortedHistory.forEach((k, v) -> {
                 System.out.println(k.format(ISO_DATE_TIME));
                 System.out.println(v.getFirst().transactionID());
