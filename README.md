@@ -20,15 +20,15 @@ Este projeto é uma aplicação Java orientada a objetos, desenvolvida com o obj
     *  Listagem das contas, contas de investimento e carteiras de investimento ativas;
     * Acompanhamento de histórico de transações.
 
-- O projeto está separado nas seguintes pastas:
+- O projeto está separado da seguinte forma:
 
-    * `dio.bankJava`:
-        - `Main.java`: ponto de entrada da aplicação, lidando com o menu da aplicação e processamento das entradas do usuário.
-    * `dio.bankJava.exceptions`:  
+    * `Main.java`: arquivo que lida com o menu da aplicação e processamento das entradas do usuário.
+    
+    * Pasta `exceptions`:  
         - Classes que lidam com exceções específicas para diferentes cenários, como por exemplo `AccountNotFoundException`, que lida com o caso de uma conta não ser encontrada pela aplicação.
-    * `dio.bankJava.models`:
+    * Pasta `models`:
         - Classes que contém os modelos de domínio principais da aplicação, como por exemplo `AccountType`, para a definição dos tipos de conta oferecidos pela aplicação.
-    * `dio.bankJava.repository`:
+    * Pasta `repository`:
         - Classes que atuam como camada de acesso de dados na memória, gerenciando as regras de nengócio das operações entre as classes.
 
 ---
